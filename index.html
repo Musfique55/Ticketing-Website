@@ -1,43 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ticketing Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <header>
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>Destination</a></li>
-                <li><a>Search</a></li>
-                </ul>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="px-20 py-5">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu font-medium text-base text-[rgba(3,7,18,0.7)] menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <a
+            class="btn btn-ghost text-4xl raleway font-extrabold text-[rgb(3,7,18);]"
+            >P-Ticket</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul
+            class="menu menu-horizontal px-1 font-medium text-base text-[rgba(3,7,18,0.7)]"
+          >
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a
+            class="btn bg-[rgba(29,209,0,0.1)] text-[rgb(29,209,0)] rounded-xl px-[30px]"
+            >Bus <img src="images/bus-icon.png" alt=""
+          /></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="banner px-20">
+        <div
+          class="h-[550px] flex flex-col justify-center items-center bg-[linear-gradient(180.00deg,rgba(3,7,18,0.5),rgba(3,7,18,0)100%)] bg-[url('images/banner.png')] bg-no-repeat bg-center bg-cover text-center py-20 rounded-[32px]"
+        >
+          <h2 class="text-6xl font-extrabold raleway text-white">
+            End-to-End Travel with
+            <br />
+            <span class="text-[rgb(29,209,0)]">P Paribahan</span>
+          </h2>
+          <p class="mt-4 mb-8 inter font-normal text-base text-white">
+            Yes, you can run unit tests and view the results directly within the
+            app. The <br />
+            integrated testing features allow for a streamlined .
+          </p>
+          <button
+            class="btn-primary bg-[rgb(29,209,0)] text-[rgb(3,7,18)] text-base font-bold raleway px-[30px] py-5 rounded-xl"
+          >
+            <a href="#ticket-booking" class="text-[rgb(3,7,18)] text-base font-bold raleway"
+              >Buy Tickets</a
+            >
+          </button>
+        </div>
+      </section>
+      <section
+        class="overlapped px-20 flex gap-6 justify-center z-10 relative -mt-16"
+      >
+        <div
+          class="cards flex border-b-[rgb(29,209,0)] border-b-[3px] rounded-3xl h-[138px] items-center justify-center w-[308px] bg-white gap-5"
+        >
+          <img src="images/people.png" alt="" />
+          <div>
+            <h3 class="text-[rgb(3,7,18);] font-bold inter text-3xl">500K+</h3>
+            <p class="inter font-normal text-xl">Registered users</p>
+          </div>
+        </div>
+        <div
+          class="cards flex border-b-[rgb(29,209,0)] border-b-[3px] rounded-3xl h-[138px] items-center justify-center w-[308px] bg-white gap-5"
+        >
+          <img src="images/ticket-cupon.png" alt="" />
+          <div>
+            <h3 class="text-[rgb(3,7,18);] font-bold inter text-3xl">
+              1.7 lacks
+            </h3>
+            <p class="inter font-normal text-xl">Tickets sold</p>
+          </div>
+        </div>
+        <div
+          class="cards flex border-b-[rgb(29,209,0)] border-b-[3px] rounded-3xl h-[138px] items-center justify-center w-[308px] bg-white gap-5"
+        >
+          <img src="images/people.png" alt="" />
+          <div>
+            <h3 class="text-[rgb(3,7,18);] font-bold inter text-3xl">500K+</h3>
+            <p class="inter font-normal text-xl">Registered users</p>
+          </div>
+        </div>
+      </section>
+      <section class="ticket-coupon lg:mt-32 lg:px-20">
+        <h2 class="text-center raleway text-4xl font-bold text-[rgb(3,7,18)]">
+          Best offers for you
+        </h2>
+        <div class="coupons flex justify-between lg:mt-12">
+          <div
+            class="bg-[rgb(255,191,15)] flex justify-around rounded-3xl items-center lg:w-[573px]"
+          >
+            <p class="inter font-black text-4xl text-[rgba(3,7,18,0.8)]">
+              15% OFF <br />
+              <span class="inter font-semibold text-xl"
+                >on your next purchase</span
+              >
+              <br />
+              <span
+                class="text-[18px] inter font-medium text-[rgba(3,7,18,0.5)]"
+                >use by January 2024</span
+              >
+            </p>
+            <img src="images/cupon-devider.png" alt="" class="h-[248px] w-12" />
+            <p class="text-[rgba(3,7,18,0.4)] raleway text-xl font-medium">
+              <span class="text-[rgb(3,7,18)] font-bold text-3xl raleway"
+                >NEW15</span
+              ><br />
+              Coupon Code
+            </p>
+          </div>
+          <div
+            class="bg-[rgb(247,140,156)] flex justify-around rounded-3xl items-center lg:w-[573px]"
+          >
+            <p class="inter font-black text-4xl text-[rgba(3,7,18,0.8)]">
+              20% OFF <br />
+              <span class="inter font-semibold text-xl"
+                >on your next purchase</span
+              >
+              <br />
+              <span
+                class="text-[18px] inter font-medium text-[rgba(3,7,18,0.5)]"
+              >
+                use by January 2024</span
+              >
+            </p>
+            <img src="images/cupon-devider.png" alt="" class="h-[248px] w-12" />
+            <p class="text-[rgba(3,7,18,0.4)] raleway text-xl font-medium">
+              <span class="text-[rgb(3,7,18)] font-bold text-3xl raleway"
+                >Couple 20</span
+              ><br />
+              Coupon Code
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <button
+            class="btn-primary text-[rgb(29,209,0)] text-xl font-bold py-[21px] px-[30px] rounded-xl border-[rgb(29,209,0)] border lg:mt-16"
+          >
+            See All Offers
+          </button>
+        </div>
+      </section>
+      <section class="tickets bg-[rgb(247,248,248)] border-t border-t border-t-[rgb(29,209,0)] border-t-2 rounded-t-[88px] lg:mt-32 lg:px-28 lg:pb-[120px] lg:pt-[120px]">
+        <div class="ticket" >
+          <div>
+            <h2 class="text-[40px] font-bold raleway text-center">
+              P.H Paribahan
+            </h2>
+            <p class="inter text-[18px] font-normal text-center lg:pb-12 lg:pt-3">
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated <br />
+              testing features allow for a streamlined .
+            </p>
+          </div>
+          <div id="ticket-booking" class="ticket-container items-center rounded-3xl bg-white flex mb-6">
+            <div class="first-part flex flex-col justify-center px-8 flex-initial">
+              <div class="intro-container flex justify-between mb-6">
+                <div class="flex gap-3 intro items-center">
+                    <img src="images/bus-logo.png" alt="" class="w-16 h-12"/>
+                    <div>
+                      <p class="text-[rgb(3,7,18)] raleway text-3xl font-bold">Greenline Paribahan</p>
+                      <p class="inter text-[rgba(3,7,18,0.6)] text-[18px] font-normal">Coach-009-WEB ! AC_Business</p>
+                    </div>
+                  </div>
+                  <div class="seats-available flex py-[17px] px-5 bg-[rgba(29,209,0,0.15)] justify-center items-center rounded-xl">
+                    <img src="images/seat-green.png" alt="">
+                    <p class="tet-[rgb(29,209,0)] font-medium text-[18px]">40 Seats left</p>
+                  </div>
               </div>
-              <a class="btn btn-ghost text-xl">P-Ticket</a>
+              <div class="bg-[rgb(247,248,248)] p-8 rounded-3xl w-[808px]">
+                <div class="flex justify-between items-center border-b-[rgba(3,7,18,0.2)] border-dashed border-b ">
+                    <p class="text-[rgba(3,7,18,0.6)] text-[18px] font-semibold raleway">Route</p>
+                    <p class="raleway text-[rgb(3,7,18)] font-semibold text-[18px] py-4">Dhaka - Sylhet</p>
+                </div>
+                <div class="flex justify-between items-center border-b-[rgba(3,7,18,0.2)] border-dashed border-b">
+                    <p class="text-[rgba(3,7,18,0.6)] text-[18px] font-semibold raleway py-4">Departure Time</p>
+                    <p class="raleway text-[rgb(3,7,18)] font-semibold text-[18px]">9:00 pm</p>
+                </div>
+                <div class="boarding-points flex justify-between  mt-6">
+                    <div class="">
+                        <button class="btn-primary bg-[rgba(3,7,18,0.05)] inter text-base text-[rgba(3,7,18,0.8)] py-[18px] px-4 rounded-xl w-[232px]">Boarding Point - Laxmipur</button>
+                    </div>
+                    <div class="">
+                        <button class="btn-primary bg-[rgba(3,7,18,0.05)] inter text-base text-[rgba(3,7,18,0.8)] py-[18px] px-4  rounded-xl w-[232px]">Dropping Point - Bogura</button>
+                    </div>
+                    <div class="">
+                        <button class="btn-primary bg-[rgba(3,7,18,0.05)] inter text-base text-[rgba(3,7,18,0.8)] py-[18px] px-4  rounded-xl w-[232px]">Est. Time - 11 Hour</button>
+                    </div>
+                </div>
+              </div>
             </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a>Home</a></li>
-                <li><a>About</a></li>
-                <li><a>Destination</a></li>
-                <li><a>Search</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end">
-              <a class="btn">Button</a>
+            <img src="images/info-devider.png" alt="" >
+            <div class="flex-1 flex flex-col justify-center items-center">
+                <img src="images/fare.png" alt="">
+                <h3>550 Taka</h3>
+                <p>Per Seat</p>
             </div>
           </div>
-    </header>
-    <main></main>
-    <footer></footer>
-</body>
+          <div  class="seats bg-white p-8 rounded-3xl flex">
+            <div class="flex flex-col gap-x-12 gap-y-6 border-r-2 border-r-[rgba(3,7,18,0.3)] border-dashed lg:pr-5">
+                <h3 class="raleway text-2xl font-semibold">Select Your Seat</h3>
+                <div class="flex justify-between items-center  border-t-[rgba(3,7,18,0.2)] border-dashed border-t border-b border-b-[rgba(3,7,18,0.2)] py-5">
+                  <div class="flex items-center gap-4">
+                    <img src="images/seat-gray.png" alt="">
+                    <p class="inter text-[rgba(3,7,18,0.5)] text-base font-medium"">available</p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <img src="images/seat-green-filled.png" alt="">
+                    <p class="inter text-[rgb(29,209,0)] text-base font-medium">Selected</p>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base"><img src="images/Vector.svg" alt=""></kbd>
+                </div>
+                <div class="flex items-center gap-12">
+                    <div class="flex gap-5 items-center">
+                        <p class="text-[rgba(3,7,18,0.5)] inter text-base">A</p>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">A1</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">A2</kbd>
+                    </div>
+                    <div class="flex gap-5">
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">A3</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">A4</kbd>
+                    </div>
+                </div>
+                <div class="flex items-center gap-12">
+                    <div class="flex gap-5 items-center">
+                        <p class="text-[rgba(3,7,18,0.5)] inter text-base">B</p>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">B1</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">A2</kbd>
+                    </div>
+                    <div class="flex gap-5">
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">B3</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">B4</kbd>
+                    </div>
+                </div>
+                <div class="flex items-center gap-12">
+                    <div class="flex gap-5 items-center">
+                        <p class="text-[rgba(3,7,18,0.5)] inter text-base">C</p>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">C1</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">C2</kbd>
+                    </div>
+                    <div class="flex gap-5">
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">C3</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">C4</kbd>
+                    </div>
+                </div>
+                <div class="flex items-center gap-12">
+                    <div class="flex gap-5 items-center">
+                        <p class="text-[rgba(3,7,18,0.5)] inter text-base">D</p>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">D1</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">D2</kbd>
+                    </div>
+                    <div class="flex gap-5">
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">D3</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">D4</kbd>
+                    </div>
+                </div>
+                <div class="flex items-center gap-12">
+                    <div class="flex gap-5 items-center">
+                        <p class="text-[rgba(3,7,18,0.5)] inter text-base">E</p>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">E1</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">E2</kbd>
+                    </div>
+                    <div class="flex gap-5">
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">E3</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">E4</kbd>
+                    </div>
+                </div>
+                <div class="flex items-center gap-12">
+                    <div class="flex gap-5 items-center">
+                        <p class="text-[rgba(3,7,18,0.5)] inter text-base">F</p>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">F1</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">F2</kbd>
+                    </div>
+                    <div class="flex gap-5">
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">F3</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">F4</kbd>
+                    </div>
+                </div>
+                <div class="flex items-center gap-12">
+                    <div class="flex gap-5 items-center">
+                        <p class="text-[rgba(3,7,18,0.5)] inter text-base">G</p>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">G1</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">G2</kbd>
+                    </div>
+                    <div class="flex gap-5">
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">G3</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">G4</kbd>
+                    </div>
+                </div>
+                <div class="flex items-center gap-12">
+                    <div class="flex gap-5 items-center">
+                        <p class="text-[rgba(3,7,18,0.5)] inter text-base">H</p>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">H1</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">H2</kbd>
+                    </div>
+                    <div class="flex gap-5">
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">H3</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">H4</kbd>
+                    </div>
+                </div>
+                <div class="flex items-center gap-12">
+                    <div class="flex gap-5 items-center justify-center">
+                        <p class="text-[rgba(3,7,18,0.5)] inter text-base pr-1">I</p>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">I1</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">I2</kbd>
+                    </div>
+                    <div class="flex gap-5">
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">I3</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">I4</kbd>
+                    </div>
+                </div>
+                <div class="flex items-center gap-12">
+                    <div class="flex gap-5 items-center">
+                        <p class="text-[rgba(3,7,18,0.5)] inter text-base">J</p>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">J1</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">J2</kbd>
+                    </div>
+                    <div class="flex gap-5">
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">J3</kbd>
+                        <kbd class="kbd w-[110px] h-[56px] text-[rgba(3,7,18,0.5)] inter text-base">J4</kbd>
+                    </div>
+                </div>
+            </div>
+            <!-- seats end here -->
+            <div class="inputs flex-1 lg:pl-5">
+              <div class="border-b border-b-[rgba(3,7,18,0.2)] border-dashed pb-5">
+                <h3 class="raleway text-2xl font-semibold">Select Your Seat</h3>
+              </div>
+              <div class="bg-[rgb(247,248,248)] p-8  mt-6 rounded-xl ">
+                <div class="flex justify-between  border-b border-dashed border-b-[rgba(3,7,18,0.2)] pb-4">
+                  <div>
+                    <p class="inter font-medium text-base text-[rgb(3,7,18)]">Seat <span id="added-seat" class="bg-[rgb(29,209,0)] text-white px-1 py-0">0</span></p>
+                  </div>
+                  <div>
+                    <p class="inter font-medium text-base text-[rgb(3,7,18)]">Class</p>
+                  </div>
+                  <div>
+                    <p class="inter font-medium text-base text-[rgb(3,7,18)]">Price</p>
+                  </div>
+                </div>
+                <div id="dynamic-content flex justify-between border-b-1 border-b-[rgba(3,7,18,0.2)] border-b">
+                  <div id="seat-name"></div>
+                  <div id="class"></div>
+                  <div id="price"></div>
+                </div>
+                <div class=" flex justify-between mt-4">
+                  <p class="inter font-medium text-base text-[rgb(3,7,18)]">Total Price</p>
+                  <p class="inter font-medium text-base text-[rgb(3,7,18)]">BDT <span id="taka">0</span></p>
+                </div>
+                <div class="relative mt-4">
+                  <input type="text" placeholder="Have any copupon?" class="input w-full rounded-xl " />
+                  <button type="submit" class="bg-[rgb(29,209,0)] text-white inter text-base py-2 px-3 rounded-xl absolute right-2 top-1">Apply</button>
+                </div>
+                <div class=" flex justify-between mt-4">
+                  <p class="inter font-medium text-base text-[rgb(3,7,18)]">Grand Price</p>
+                  <p class="inter font-medium text-base text-[rgb(3,7,18)]">BDT <span id="taka">0</span></p>
+                </div>
+              </div>
+              <!-- passenger inputs -->
+              <div class="mt-6">
+                <h4 class="inter text-[rgb(3,7,18)] font-semibold text-base mb-4">Passenger Name*</h4>
+                <input type="text" required placeholder="Enter your name" class="input w-full mb-6 border rounded-xl border border-[rgba(3,7,18,0.2)]"/>
+              
+                <h4 class="inter text-[rgb(3,7,18)] font-semibold text-base mb-4">Phone Number*</h4>
+                <input type="text" required placeholder="Enter your phone number" class="input w-full mb-6 border rounded-xl border border-[rgba(3,7,18,0.2)]"/>
+                
+                <h4 class="inter text-[rgb(3,7,18)] font-semibold text-base mb-4">Email ID</h4>
+                <input type="email"  placeholder="Enter your email" class="input w-full mb-6 border rounded-xl border border-[rgba(3,7,18,0.2)]"/
+                >
+                <button type="submit" class="btn-primary w-full bg-[rgb(29,209,0)] py-3 rounded-xl raleway font-extrabold text-xl text-white">Next</button>
+                <div class="flex mt-6 justify-between">
+                  <p class="inter font-normal text-base text-[rgba(3,7,18,0.6)] underline">Terms and Conditions</p>
+                  <p class="inter font-normal text-base text-[rgba(3,7,18,0.6)] underline">Cancellation Policy</p>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[rgb(3,7,18)] lg:px-20 lg:py-28">
+      <div class="flex justify-between border-b-[rgba(255,255,255,0.3)] border-b border-dashed pb-12">
+        <div>
+          <h3 class="text-4xl raleway font-extrabold text-white"
+        >P-Ticket></h3>
+        <p class="text-[rgba(255,255,255,0.8)] text-base inter mt-4 font-normal">P-Ticket is a digital platform to make your <br>
+           daily commuting better.</p>
+        </div>
+        <div>
+          <p class="raleway text-xl font-semibold text-white">Download our app</p>
+          <div class="flex border rounded-xl border-[rgb(255,255,255)] items-center justify-center p-2 cursor-pointer">
+            <img src="images/playstore.png" alt="">
+            <p class="inter font-base text-white">get it on<br> <span class="text-white font-semibold text-xl">Google Play</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between mt-7">
+        <p class="inter font-medium text-white text-sm">@All rights reserved, P-Ticket services limited.2024</p>
+        <div class="flex gap-6">
+          <p class="inter font-medium text-white text-sm">Terms & condition</p>
+          <p class="inter font-medium text-white text-sm">Terms & condition</p>
+          <p class="inter font-medium text-white text-sm">Terms & condition</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
