@@ -82,7 +82,6 @@ function grandTotal() {
     const total = convertedAmount - discountPrice;
     finalAmount.innerText = total;
     couponField.classList.add("hidden");
-    // setTextFirst(discount,discountPrice);
     const p = document.createElement('p');
     const p2 = document.createElement('p');
     p.classList.add("inter" ,"font-medium", "text-base", "text-[rgb(3,7,18)]");
@@ -103,7 +102,7 @@ function grandTotal() {
     p2.classList.add("inter" ,"font-medium", "text-base", "text-[rgb(3,7,18)]");
     p2.innerText = '15% discount :'
     p.innerText = discountPrice;
-    discount.appendChild(p2)
+    discount.appendChild(p2);
     discount.appendChild(p);
     couponInput.value = "";
 
