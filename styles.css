@@ -11,6 +11,9 @@
 .seat-bg{
     background-color: rgb(29, 209, 0);
 }
+html{
+    scroll-behavior: smooth;
+}
 /* .disabled-btn{
     background-color: lightgrey;
     color: black;
